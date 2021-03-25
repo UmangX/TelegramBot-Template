@@ -5,6 +5,10 @@ from telegram.ext import *
 from random import randrange
 
 
+def getusername(update, context):
+    print(update.message.from_user['username'])
+
+
 
 Startup_time = time.asctime((time.localtime(time.time())))
 
