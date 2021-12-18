@@ -7,9 +7,13 @@ from random import randrange
 def getusername(update, context):
     print(update.message.from_user['username'])
 Startup_time = time.asctime((time.localtime(time.time())))
+#add your api key here for the works 
 bot = Bot("Your API Key")
+
+#this are all my pictures replace them with yours 
 pictures = ("https://photos.app.goo.gl/49xpGxEKVAQBGEA7A","https://photos.app.goo.gl/EQRdTZAWk71F5UXU9","https://photos.app.goo.gl/CGDT9yojjRzot6Hb8","https://photos.app.goo.gl/c1U4ofczKu6Ag3NVA","https://photos.app.goo.gl/UjzBFUGiDRA9wb9c8")
 
+#returns random quotes from goquotes api 
 def quotess(update:Update,context:CallbackContext):
     print("Command Executed") 
     data = requests.get("https://goquotes-api.herokuapp.com/api/v1/random?count=1")
@@ -63,6 +67,7 @@ def runsince(update:Update,context:CallbackContext):
     print("Command Executed") 
 
 def main():    
+    #replace with your api key 
     bot = Bot("Your API Key")
     updater = Updater("Your API Key",use_context=True)
     dispatcher = updater.dispatcher
